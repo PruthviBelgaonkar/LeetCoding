@@ -1,19 +1,16 @@
 class Solution {
 public:
-    void moveZeroes(vector<int>&a) {
+    int removeElement(vector<int>&a, int val) {
+        int n=a.size();
         int j=0;
-        
-        for(int i=0;i<a.size();i++)
+        for(int i=0;i<n;i++)
         {
-            if(a[i]!=0)
+            if(a[i]!=val)
             {
                 a[j]=a[i];
                 j++;
-            }    
+            }
         }
-        for(;j<a.size();j++)
-        {
-            a[j]=0;
-        }
+        return j;
     }
 };
